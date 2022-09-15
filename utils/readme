@@ -38,17 +38,14 @@ gcc -o term term.c -l ncurses -l wiringPi
 
 Recovered:
 
-/stm32/v4/jubes/v4.s	ikeybd.s
-			bci.s
-			ifonts.s	(short)
-			icharo.s
-as -o temp.o v4.s
-./ld
-hd temp >jubes.hex
-diff jubsc.hex code210911.txt
-(same until end)
+ikeybd.s
+bci.s
+ifonts.s	(short)
+icharo.s
 
+as -o temp.o ../src/os.s
+./ld
 ./id
-./erase ./e4
+./erase103 ./erase411
 ./burn
 ./term

@@ -986,13 +986,13 @@ cline:	.ascii "[$\n>\0O I E_F]\0"	// requires reset to exit	unit 10
 	.end
 //
 // usage:
-//	nano v4.s
-//	as -o temp.o v4.s
+//	nano os.s
+//	as -o temp.o os.s
 //	./stmld		// (hold and reset)
 //	./stmid
 //	./stmerase	// 103
-//	./stme4	// 411
-//	./stmid	// 411	// (hold and reset)
+//	./stme4		// 411
+//	./stmid		// 411	// (hold and reset)
 //	./stmburn
-//	./???term	// (reset alone)
+//	./term		// (reset alone)
 
