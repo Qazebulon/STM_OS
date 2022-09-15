@@ -1,0 +1,54 @@
+----- readme -----
+
+STM32F103 blue pill:
+nano v4.b22
+as -o temp.o v4.b22
+./ld
+(boot0:reset)
+./id
+./erase
+./burn
+(normal reset)
+./term
+
+STM32F411 black pill:
+nano v4.b22
+as -o temp.o v4.b22
+./ld
+(boot0:reset)
+./id
+./e4
+(boot0:reset)
+./id
+./burn
+(normal reset)
+
+Utility File Construction:
+gcc -o ld stmld.c
+sudo apt-get install libncurses5-dev	(once only)
+gcc -o id stmid.c -l ncurses -l wiringPi
+gcc -o erase stmerase.c -l ncurses -l wiringPi
+gcc -o e4 stme4.c -l ncurses -l wiringPi
+gcc -o burn stmburn.c -l ncurses -l wiringPi
+gcc -o term term.c -l ncurses -l wiringPi
+
+-------------------------------------------------
+
+----- use other computer -----
+
+Recovered:
+
+/stm32/v4/jubes/v4.s	ikeybd.s
+			bci.s
+			ifonts.s	(short)
+			icharo.s
+as -o temp.o v4.s
+./ld
+hd temp >jubes.hex
+diff jubsc.hex code210911.txt
+(same until end)
+
+./id
+./erase ./e4
+./burn
+./term
