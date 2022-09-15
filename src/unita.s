@@ -86,7 +86,7 @@ setup:	// We will begin with the same setup code we used in Unit2.s:
 	//	A3:  Touch_Select	3: Normal Output (odr=1)
 	//	A2:  uSD_Card_Select	3: Normal Output (odr=1)
 	//	A1:  Beeper		3: Normal Output
-	//	A0:  --			4: Normal input
+	//	A0:  User Input		4: Normal input
 
 	ldr r0,=0xB8B33334	// A7:B A6:8 A5:B A4:3 A3:3 A2:3 A1:3 A0:4
 	str r0,[r1]		// GPIO_A (CRL offset: 0)
@@ -153,6 +153,9 @@ loop:
 //	lsls r4,#2		// Then shift it left 4 times for Port A4
 	mov r4,#0x10		// (or just load the bit already shifted)
 	ldr r3,=0x40010800	// Also Cue r3 to GPIO_A Base Register:
+
+	// 0x40020010
+
 
 	// Was the command a "1"
 	cmp r0,#0x31	// Compare r0 to the ASCII code for "1"

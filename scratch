@@ -1,2 +1,3 @@
 Green(Tx), Blue(Rx), White(+5), Purple(Gnd)
 
+Note: unita and unitb only run on 103 due to lack of 411 drivers... add them.
