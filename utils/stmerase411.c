@@ -80,7 +80,6 @@ void main( int argc, char *argv[] ) {	// argc=# of arguments passed
 		serialPutchar (fd, 0xff); delay(1); // clear all
 		serialPutchar (fd, 0xff); delay(1); // clear all
 		serialPutchar (fd, 0x00); delay(1); // (compliment)
-		serialPutchar (fd, 0x00); delay(1); // (compliment)
 		ch=serialGetchar(fd);	// get response (times out after 10 seconds)
 		if (ch != 0x79) {
 			printf(", NACK2");	// receive ACK

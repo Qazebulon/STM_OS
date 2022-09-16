@@ -5,8 +5,5 @@ echo 'Did you remember to reset the 411?'
 read x
 ../utils/id
 ../utils/erase411
-echo 'Reset the 411'
-read x
-../utils/id
 ../utils/burn
 ../utils/term

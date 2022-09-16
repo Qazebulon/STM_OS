@@ -1,3 +1,9 @@
 Green(Tx), Blue(Rx), White(+5), Purple(Gnd)
 
 Note: unita and unitb only run on 103 due to lack of 411 drivers... add them.
+
+
+DOCUMENTATION:
+- PM0068 
+- AN3155 (USART protocol used in the STM32 bootloader)
+
