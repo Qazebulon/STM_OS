@@ -139,7 +139,7 @@ setup:	// We will begin with the same setup code we used in Unit2.s:
 //  Here we will write a very simple "Operating System":
 //
 loop:
-	// First, read a single-character "commnrd" and echo it:
+	// First, read a single-character "command" and echo it:
 	bl RXin			// Get one ASCII character (into r0)
 	bl TXout		// Then ransmit it back to the Pi
 
