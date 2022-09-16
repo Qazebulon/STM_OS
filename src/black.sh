@@ -6,4 +6,5 @@ read x
 ../utils/id
 ../utils/erase411
 ../utils/burn
+sleep 0.5
 ../utils/term

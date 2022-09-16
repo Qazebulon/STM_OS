@@ -70,6 +70,8 @@ void main( int argc, char *argv[] ) {	// argc=# of arguments passed
 //		ch=serialGetchar(fd);	// get response (else times out after 10 seconds)
 //		if (ch != 0x79) { printf("NACK5\n"); }		// receive ACK
 
+		printf("Erasing Device...\n");
+
 		//	Erase Entire Device
 		//
 		serialPutchar (fd, 0x43); delay(1); // read command

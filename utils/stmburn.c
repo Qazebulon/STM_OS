@@ -34,11 +34,15 @@ void main( int argc, char *argv[] )  {		// argc is the number of arguments passe
 	//
 	fd=serialOpen ("/dev/serial0", 115200);	// open serial port
 
+	printf("Programming Device");
+
+
 	//	Send Data
 	//
 	byte=0;				// don't exit before first loop
 	while (adr3>0 && byte>=0) {	// count pages as long as input file not empty
 		printf(".");	// mark progress
+		fflush(stdout);
 		//
 		//	Write One 256-Byte Block
 		//
